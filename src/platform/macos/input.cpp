@@ -534,7 +534,7 @@ const KeyCodeMap kKeyCodesMap[] = {
     if (!output_name.empty()) {
       uint32_t max_display = 32;
       uint32_t display_count;
-      CGDirectDisplayID displays[max_display];
+      CGDirectDisplayID displays[32];
       if (CGGetActiveDisplayList(max_display, displays, &display_count) != kCGErrorSuccess) {
         BOOST_LOG(error) << "Unable to get active display list , error: "sv << std::endl;
       } else {
